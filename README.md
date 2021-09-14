@@ -1,11 +1,8 @@
 # Push_swap
 Projet 42 :
 
-Ce projet est inspiré du jeu éponyme mondialement connu, considéré comme
-le premier FPS jamais développé (technique du
-ray-casting).
-
-L'objectif est de faire une vue dynamique au sein d’un labyrinthe, dans
-lequel vous devrez trouver votre chemin.
+Ce projet permet de trier des données sur une pile, avec un ensemble limité d'instructions, en utilisant
+le plus petit nombre possible d'actions pour un
+tri optimisé des données.
 
 ---> Succeeded with %

@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exit.c                                             :+:      :+:    :+:   */
+/*   atol.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/06 20:45:30 by safernan          #+#    #+#             */
-/*   Updated: 2021/10/06 20:45:31 by safernan         ###   ########.fr       */
+/*   Created: 2021/10/06 20:42:20 by safernan          #+#    #+#             */
+/*   Updated: 2021/10/06 20:42:21 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-void	ft_exit(char *string, int code)
+long	ft_atol(char *s)
 {
-	printf("%s\n", string);
-	wrdestroy();
-	exit(code);
+	int		i;
+	int		neg;
+	long	res;
+
+	i = -1;
+	neg = 0;
+	res = 0;
+	while (s[++i] == '+' || s[i] == '-')
+		if (s[i] == '-')
+			neg = !neg;
+	while (s[i])
+		res = (res * 10) + (s[i++] - '0');
+	if (!neg)
+		return (res);
+	return (res * -1);
 }

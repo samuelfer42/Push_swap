@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exit.c                                             :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/06 20:45:30 by safernan          #+#    #+#             */
-/*   Updated: 2021/10/06 20:45:31 by safernan         ###   ########.fr       */
+/*   Created: 2021/10/06 20:44:27 by safernan          #+#    #+#             */
+/*   Updated: 2021/10/06 20:44:28 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-void	ft_exit(char *string, int code)
+int	ft_strlen(char *s)
 {
-	printf("%s\n", string);
-	wrdestroy();
-	exit(code);
+	int	i;
+
+	i = 0;
+	while (s[i])
+		++i;
+	return (i);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/23 18:21:40 by safernan          #+#    #+#             */
-/*   Updated: 2021/05/23 18:21:46 by safernan         ###   ########.fr       */
+/*   Created: 2021/10/06 20:49:02 by safernan          #+#    #+#             */
+/*   Updated: 2021/10/06 20:49:03 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct		s_list
 	struct s_list	*next;
 
 }					t_list;
+
 
 
 /*
@@ -56,3 +57,4 @@ char	**ft_split(char const *s, char c);
 long	ft_atol(char *s);
 int	ft_strcmp(char *s1, char *s2);
 #endif
+

@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exit.c                                             :+:      :+:    :+:   */
+/*   list_two.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/06 20:45:30 by safernan          #+#    #+#             */
-/*   Updated: 2021/10/06 20:45:31 by safernan         ###   ########.fr       */
+/*   Created: 2021/10/06 20:39:07 by safernan          #+#    #+#             */
+/*   Updated: 2021/10/06 20:39:08 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_exit(char *string, int code)
+t_list	*lst_get_last(t_list **lst)
 {
-	printf("%s\n", string);
-	wrdestroy();
-	exit(code);
+	t_list	*tmp;
+
+	tmp = *lst;
+	while (tmp->next)
+		tmp = tmp->next;
+	return (tmp);
 }

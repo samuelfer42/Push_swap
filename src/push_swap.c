@@ -5,12 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/22 13:16:12 by safernan          #+#    #+#             */
-/*   Updated: 2021/05/23 18:20:50 by safernan         ###   ########.fr       */
+/*   Created: 2021/10/06 20:37:03 by safernan          #+#    #+#             */
+/*   Updated: 2021/10/06 20:37:10 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	print_stack(char *last)
+{
+		printf("%s\n", last);
+}
 
 int	define_chunk(int size)
 {

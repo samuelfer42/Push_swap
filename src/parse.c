@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/23 18:27:29 by safernan          #+#    #+#             */
-/*   Updated: 2021/05/23 18:27:35 by safernan         ###   ########.fr       */
+/*   Created: 2021/10/06 20:37:30 by safernan          #+#    #+#             */
+/*   Updated: 2021/10/06 20:37:31 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@ void	init_struct(t_struct *ps)
 {
 	ps->lst_a = wrmalloc(sizeof(t_list *));
 	*ps->lst_a = NULL;
-	ps->debug = 0;
-	ps->color = 0;
-	ps->flag = 0;
 	ps->lst_b = wrmalloc(sizeof(t_list *));
 	*ps->lst_b = NULL;
 }
@@ -78,18 +75,10 @@ void	parse(char **av, t_struct *ps, int i)
 	init_struct(ps);
 	while (av[++i])
 	{	
-		if (i < 3 && !ft_strcmp(av[i], "-v") && !ps->flag)
-			ps->debug = 1;
-		else if (i < 3 && !ft_strcmp(av[i], "-c") && !ps->flag)
-			ps->color = 1;
-		else
-		{
-			ps->flag = 1;
 			part = ft_split(av[i], ' ');
 			if (!part[0])
 				ft_exit("Error", 1);
 			take_arg(part, ps);
-		}
 	}
 	ps->size = lst_size(ps->lst_a);
 }

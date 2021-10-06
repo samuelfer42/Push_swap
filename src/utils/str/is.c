@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exit.c                                             :+:      :+:    :+:   */
+/*   is.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/06 20:45:30 by safernan          #+#    #+#             */
-/*   Updated: 2021/10/06 20:45:31 by safernan         ###   ########.fr       */
+/*   Created: 2021/10/06 20:44:49 by safernan          #+#    #+#             */
+/*   Updated: 2021/10/06 20:44:51 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-void	ft_exit(char *string, int code)
+int	is_alpha(char c)
 {
-	printf("%s\n", string);
-	wrdestroy();
-	exit(code);
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	return (0);
+}
+
+int	is_digit(char c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }

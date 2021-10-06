@@ -5,11 +5,10 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/23 18:29:27 by safernan          #+#    #+#             */
-/*   Updated: 2021/05/23 18:29:35 by safernan         ###   ########.fr       */
+/*   Created: 2021/10/06 20:36:27 by safernan          #+#    #+#             */
+/*   Updated: 2021/10/06 20:36:28 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
@@ -32,14 +31,14 @@ int	is_top_max(t_list **lst)
 void	micro_sort(t_struct *ps)
 {
 	if (is_top_max(ps->lst_a))
-		reverse_rotate(ps->lst_a, ps, 1, 1);
+		reverse_rotate(ps->lst_a, 1, 1);
 	if (is_max(ps->lst_a, (*ps->lst_a)->next))
-		reverse_rotate(ps->lst_a, ps, 1, 1);
+		reverse_rotate(ps->lst_a, 1, 1);
 	if ((long)(*ps->lst_a)->content > (long)(*ps->lst_a)->next->content)
-		swap(ps->lst_a, ps, 1, 1);
+		swap(ps->lst_a, 1, 1);
 }
 
-void	put_min_top(t_list **lst, int pos, t_struct *ps)
+void	put_min_top(t_list **lst, int pos)
 {
 	int	size;
 
@@ -48,12 +47,12 @@ void	put_min_top(t_list **lst, int pos, t_struct *ps)
 	{
 		pos = size - pos;
 		while (pos-- != 0)
-			reverse_rotate(lst, ps, 1, 1);
+			reverse_rotate(lst, 1, 1);
 	}
 	else if (pos <= size / 2)
 	{
 		while (pos-- != 0)
-			rotate(lst, ps, 1, 1);
+			rotate(lst, 1, 1);
 	}
 }
 
@@ -66,12 +65,12 @@ void	mini_sort(t_struct *ps)
 	size = lst_size(ps->lst_a);
 	while (++i < (size - 3))
 	{
-		put_min_top(ps->lst_a, get_min_pos(ps->lst_a), ps);
-		push(ps->lst_b, ps->lst_a, ps, 0);
+		put_min_top(ps->lst_a, get_min_pos(ps->lst_a));
+		push(ps->lst_b, ps->lst_a, 0);
 	}
 	micro_sort(ps);
 	while (lst_size(ps->lst_b))
-		push(ps->lst_a, ps->lst_b, ps, 1);
+		push(ps->lst_a, ps->lst_b, 1);
 }
 
 void	raise_plage(t_struct *ps)

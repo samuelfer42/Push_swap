@@ -6,7 +6,7 @@
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 20:49:02 by safernan          #+#    #+#             */
-/*   Updated: 2021/10/06 20:49:03 by safernan         ###   ########.fr       */
+/*   Updated: 2021/10/08 18:13:11 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ typedef struct		s_list
 	struct s_list	*next;
 
 }					t_list;
-
-
 
 /*
 ** MALLOC

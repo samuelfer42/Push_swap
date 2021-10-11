@@ -6,7 +6,7 @@
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 20:37:03 by safernan          #+#    #+#             */
-/*   Updated: 2021/10/06 20:37:10 by safernan         ###   ########.fr       */
+/*   Updated: 2021/10/11 16:00:56 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	main(int ac, char **av)
 	t_struct	*ps;
 
 	if (ac < 2)
-		ft_exit("Error", 1);
+		ft_exit("", 0);
 	ps = wrmalloc(sizeof(t_struct));
 	parse(av, ps, 0);
 	if (is_sort(ps))

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/06 20:48:41 by safernan          #+#    #+#             */
-/*   Updated: 2021/10/12 14:36:08 by safernan         ###   ########.fr       */
+/*   Created: 2021/07/06 20:48:41 by safernan          #+#    #+#             */
+/*   Updated: 2021/10/13 18:15:25 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,12 @@ typedef struct s_struct
 	int			debug;
 	int			color;
 	int			flag;
-	long			*min;
+	long		*min;
 	int			chunck;
 	long		start;
 	long		end;
 	int			push;
 }				t_struct;
-
 
 void	parse(char **av, t_struct *ps, int i);
 void	take_arg(char **part, t_struct *ps);
@@ -69,7 +68,7 @@ void	fill_sorted_a(t_struct *ps);
 */
 void	swap(t_list **lst, int aff, int type);
 void	double_swap(t_struct **ps, int aff);
-void	push(t_list **dest, t_list **src,int type);
+void	push(t_list **dest, t_list **src, int type);
 void	rotate(t_list **lst, int aff, int type);
 void	double_rotate(t_struct **ps, int aff);
 void	reverse_rotate(t_list **lst, int aff, int type);

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/06 20:37:03 by safernan          #+#    #+#             */
-/*   Updated: 2021/10/12 14:37:56 by safernan         ###   ########.fr       */
+/*   Created: 2021/07/06 20:37:03 by safernan          #+#    #+#             */
+/*   Updated: 2021/10/13 18:21:10 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	print_stack(char *last)
 {
-		printf("%s\n", last);
+	printf("%s\n", last);
 }
 
 int	define_chunk(int size)

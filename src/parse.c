@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/06 20:37:30 by safernan          #+#    #+#             */
-/*   Updated: 2021/10/12 14:38:16 by safernan         ###   ########.fr       */
+/*   Created: 2021/07/06 20:37:30 by safernan          #+#    #+#             */
+/*   Updated: 2021/10/13 18:20:56 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,10 +75,10 @@ void	parse(char **av, t_struct *ps, int i)
 	init_struct(ps);
 	while (av[++i])
 	{	
-			part = ft_split(av[i], ' ');
-			if (!part[0])
-				ft_exit("Error", 1);
-			take_arg(part, ps);
+		part = ft_split(av[i], ' ');
+		if (!part[0])
+			ft_exit("Error", 1);
+		take_arg(part, ps);
 	}
 	ps->size = lst_size(ps->lst_a);
 }

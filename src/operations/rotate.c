@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: safernan <safernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/06 20:32:38 by safernan          #+#    #+#             */
-/*   Updated: 2021/10/12 14:38:31 by safernan         ###   ########.fr       */
+/*   Created: 2021/07/06 20:32:38 by safernan          #+#    #+#             */
+/*   Updated: 2021/10/13 18:21:22 by safernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,3 @@ void	double_rev_rotate(t_struct **ps, int aff)
 	if (aff)
 		print_stack("rrr");
 }
-
